@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/797f9aab03.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="encabezado">
+      <div class="logo">
+        <img src="../images/Milessima.png" alt="imgLogo" />
+      </div>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <ul class="menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="">Nosotros</a></li>
+          <li><a href="">Desarrollos</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="">Plataforma</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="seccion-principal">
+      <section id="firstWrap" class="conteiner">
+        <div>
+          <h1 class="title">Ingresar</h1>
+          <form id="loginForm">
+            <label class="lbl" for="user">
+              <i class="fa-solid fa-at"></i>
+              <input
+                type="email"
+                name="email"
+                id="username"
+                placeholder="Ingrese su email"
+              />
+            </label>
+            <label for="pass">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                id="pass"
+                placeholder="Ingrese su contraseña"
+              />
+            </label>
+            <button id="btn">Ingresar</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="secondWrap" class="conteiner">
+        <div>
+          <h1>Registro</h1>
+          <form id="singupForm">
+            <label for=""
+              ><i class="fa-solid fa-user-tie"></i
+              ><input
+                type="text"
+                name="nombre"
+                id="nameS"
+                placeholder="Ingrese su nombre"
+            /></label>
+            <label for=""
+              ><i class="fa-solid fa-at"></i
+              ><input
+                type="email"
+                name="email"
+                id="emailS"
+                placeholder="Ingrese su correo"
+            /></label>
+            <label for=""
+              ><i class="fa-solid fa-lock"></i
+              ><input
+                type="password"
+                name="password"
+                id="passwordS"
+                placeholder="Ingrese una contraseña"
+            /></label>
+            <button id="btnS">Registrarme</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h1>© 2024 Milessima</h1>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
