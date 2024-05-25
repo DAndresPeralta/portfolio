@@ -1,9 +1,17 @@
 //-----------------------------SINGUP----------------------------------
 
+const form = document.getElementById("singupForm");
+const loginform = document.getElementById("loginForm"); //Traigo informacion de los dos formulario para hacer los Reset.
+
 const name = document.getElementById("nameS"); //Almaceno en la variable el dato ingresado por el usuario en el form
 const email = document.getElementById("emailS");
 const password = document.getElementById("passwordS");
 const btn = document.getElementById("btnS");
+
+function reset() {
+  form.reset();
+  loginform.reset();
+}
 
 btn.addEventListener("click", (e) => {
   e.preventDefault(); //Con esto evitamos que al apretar el button se actualice la página.
@@ -35,6 +43,7 @@ btn.addEventListener("click", (e) => {
     //Lo cargamos a LS com JSON
     localStorage.setItem("users", JSON.stringify(Users));
     alert("Registro exitoso");
+    reset();
   }
 });
 
@@ -62,5 +71,6 @@ button.addEventListener("click", (e) => {
   } else {
     alert(`Bienvenido ${validUser.name}`);
     localStorage.setItem("loginSuccess", JSON.stringify(validUser)); //Almacenamos los inicios de sesion.
+    reset();
   }
 });
