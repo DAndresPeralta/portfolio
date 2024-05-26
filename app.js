@@ -5,8 +5,8 @@ logo.addEventListener("mouseover", () => console.log("mouseover-logo"));
 let nav = document.querySelector("ul");
 nav.addEventListener("mouseover", () => console.log("mouseover-nav"));
 // Este addEvent captura cuando el cursor hace click sobre Contacto.
-let btn = document.querySelector(".btn");
-btn.addEventListener("mousedown", () => console.log("mouseup-btn"));
+// let btn = document.querySelector(".btn");
+// btn.addEventListener("mousedown", () => console.log("mouseup-btn"));
 
 //Con el evendo aplicado a Window registramos cuando hacemos scroll
 window.addEventListener("scroll", () => console.log("Scroll"));

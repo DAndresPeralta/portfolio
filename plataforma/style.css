@@ -21,7 +21,6 @@ body {
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    padding-bottom: 1000%;
     /*Tener cuidado con deformación*/
 }
 
@@ -79,6 +78,7 @@ a {
     color: #27292b;
     font-weight: 700;
 }
+
 
 #check {
     /*Display none oculta un elemento.*/
@@ -143,38 +143,39 @@ a {
 
 }
 
-main {
-    display: flex;
-
-}
-
-.conteiner {
+#firstWrap {
     padding: 200px;
-    width: 50%;
-}
-
-#firstWrap,
-#secondWrap {
     color: #ffab03;
     font-family: 'Wix Madefor Display';
 }
 
 #firstWrap div {
-    justify-content: center;
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+    /*margin: auto => centramos el div*/
+    height: 55vh;
+    width: 35vw;
     background-color: #007091;
-    padding: 52px 40px 52px 40px;
     border-radius: 15px;
     transition: all 0.3s ease 0s;
+}
+
+#firstWrap div form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #firstWrap div:hover {
     transform: scale(1.015);
 }
 
-#firstWrap div form button,
-#secondWrap div form button {
+#firstWrap div form button {
     font-family: 'Wix Madefor Display';
     font-weight: 600;
     color: #007091;
@@ -187,14 +188,13 @@ main {
     transition: all 0.3s ease 0s;
 }
 
-#firstWrap div form button:hover,
-#secondWrap div form button:hover {
+#firstWrap div form button:hover {
     background-color: #007091;
     color: #ffab03;
     transform: scale(1.1);
 }
 
-#secondWrap div {
+/* #secondWrap div {
     text-align: center;
     background-color: #007091;
     border-radius: 15px;
@@ -204,7 +204,7 @@ main {
 
 #secondWrap div:hover {
     transform: scale(1.015);
-}
+} */
 
 /*Configuracion del pie de página*/
 footer {
