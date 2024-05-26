@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
 
 /*Esto es un reseteo de las propiedades HTML (Hacer siempre antes de comenzar)*/
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     vertical-align: baseline;
 }
@@ -21,6 +20,7 @@ body {
     min-height: 100vh;
     height: 100%;
     width: 100%;
+    padding-bottom: 1000px;
     /*Tener cuidado con deformación*/
 }
 
@@ -78,6 +78,7 @@ a {
     color: #27292b;
     font-weight: 700;
 }
+
 
 
 #check {
@@ -140,71 +141,81 @@ a {
     #encabezado nav ul li a {
         font-size: 20px;
     }
+}
 
+/*Configuracion inicial de Main*/
+#seccion-principal {
+    display: flex;
+    flex-direction: column;
+    /*Pongo en columna los distintos section*/
+    justify-content: center;
+}
+
+/*Aca damos estructura al primer Section, padding de arriba, etc*/
+.conteiner {
+    padding-top: 250px;
+    /*Con este padding separamos del borde izquierdo el seccion*/
+    display: flex;
+    /*Se alinean los div horizontalmente*/
+    color: #ffab03;
 }
 
 #firstWrap {
-    padding: 200px;
-    color: #ffab03;
-    font-family: 'Wix Madefor Display';
-}
-
-#firstWrap div {
-    display: flex;
+    /*Separamos del borde izquierdo de la pantalla el primer section*/
+    padding-left: 10%;
+    padding-right: 10%;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    margin: auto;
-    /*margin: auto => centramos el div*/
-    height: 55vh;
-    width: 35vw;
-    background-color: #007091;
-    border-radius: 15px;
-    transition: all 0.3s ease 0s;
 }
 
-#firstWrap div form{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+/*Propiedades de la primer imagen, tamaño*/
+#firstWrap div img {
+    max-width: 320px;
 }
 
-#firstWrap div:hover {
-    transform: scale(1.015);
-}
-
-#firstWrap div form button {
-    font-family: 'Wix Madefor Display';
-    font-weight: 600;
-    color: #007091;
-    margin-top: 10px;
-    padding: 7px 10px;
-    background-color: #ffab03;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-#firstWrap div form button:hover {
-    background-color: #007091;
-    color: #ffab03;
-    transform: scale(1.1);
-}
-
-/* #secondWrap div {
+/*Propiedades del h1*/
+#firstWrap .text {
+    font-family: "Raleway";
+    font-weight: 50;
+    font-size: 1.9rem;
+    padding-left: 10%;
     text-align: center;
-    background-color: #007091;
-    border-radius: 15px;
-    padding: 30px 40px 30px 40px;
-    transition: all 0.3s ease 0s;
 }
 
-#secondWrap div:hover {
-    transform: scale(1.015);
-} */
+#secondWrap .text {
+    /*IMPORTANTE*/
+    /*CON LAS PROPIEDADES DISPLAY FLEX Y MARGIN AUTO, CENTRAMOS UN DIV (Y SU CONTENIDO) EN EL MEDIO DE LA PAGINA*/
+    display: flex;
+    margin: auto;
+    font-size: 2.9rem;
+    font-family: "Wix Madefor Display";
+    padding-left: 10%;
+}
+
+#secondWrap .text .s {
+    /*Separamos cada Span 150px cada uno respecto del otro*/
+    margin-right: 150px;
+}
+
+/*Separamos del borde el tercer section y aliminamos los item de forma centrada*/
+#thirdWrap {
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+}
+
+/*Tamaño maximo de la imagen tbt y un borde redondeado*/
+#thirdWrap div img {
+    max-width: 320px;
+    border-radius: 35px;
+}
+
+#thirdWrap .text {
+    padding-left: 10%;
+    font-family: "Raleway";
+    font-weight: 50;
+    font-size: 1.9rem;
+    line-height: 1.7em;
+}
 
 /*Configuracion del pie de página*/
 footer {
