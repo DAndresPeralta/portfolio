@@ -28,7 +28,14 @@ btn.addEventListener("click", (e) => {
   // alert("Registro exitoso");
 
   if (isUserRegistered) {
-    alert("Correo electrónico registrado. Ingrese uno válido.");
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Correo electrónico registrado. Ingrese uno valido`,
+      icon: "error",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
   } else {
     //En caso de no existir el usuario, lo pusheamos a nuestro array.
     Users.push({
@@ -38,7 +45,14 @@ btn.addEventListener("click", (e) => {
     });
     //Lo cargamos a LS com JSON
     localStorage.setItem("users", JSON.stringify(Users));
-    alert("Registro exitoso");
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Registro Exitoso!`,
+      icon: "success",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
     reset();
   }
 });

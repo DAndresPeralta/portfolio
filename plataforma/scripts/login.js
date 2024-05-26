@@ -22,9 +22,23 @@ button.addEventListener("click", (e) => {
   ); //Nos da un valor TRUE solo si existen y coinciden email y password.
   if (!validUser) {
     //!validUser significa si es False, es decir, no coinciden los datos anteriores.
-    alert("Usuario o contraseña incorrectos");
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Correo o contraseña incorrectos`,
+      icon: "error",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
   } else {
-    alert(`Bienvenido ${validUser.name}`);
+    Swal.fire({
+      //Agregamos una alerta con la LIBRERIA SweetAlert
+      title: `Bienvenido ${validUser.name}`,
+      icon: "success",
+      showConfirmButton: false, //Quitamos el boton de confirmacion.
+      timer: 3000, // Timer para que desaparezca automaticamente el alerta.
+      background: "#007091", //Cambiamos el color de fondo.
+    });
     localStorage.setItem("loginSuccess", JSON.stringify(validUser)); //Almacenamos los inicios de sesion.
     reset();
   }
