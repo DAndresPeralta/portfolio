@@ -217,22 +217,6 @@ a {
     line-height: 1.7em;
 }
 
-@media (max-width: 768px) {
-    #firstWrap {
-        padding: 75px;
-    }
-
-    #firstWrap div {
-        height: auto;
-        width: auto;
-        padding: 20px;
-    }
-
-    #firstWrap div form button {
-        padding: 10px 15px;
-    }
-}
-
 /*Configuracion del pie de página*/
 footer {
     /*Eliminamos el margen inferior y anclamos al fondo*/
