@@ -217,6 +217,48 @@ a {
     line-height: 1.7em;
 }
 
+@media (max-width: 768px) {
+    .conteiner {
+        padding-top: 100px;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #firstWrap,
+    #thirdWrap {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    #firstWrap div img,
+    #thirdWrap div img {
+        max-width: 100%;
+        margin-bottom: 100px;
+        margin-top: 55px;
+    }
+
+    #firstWrap .text,
+    #thirdWrap .text {
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    #secondWrap .text {
+        flex-direction: column;
+        padding-left: 0;
+        text-align: left;
+        font-size: 2.3rem;
+        gap: 45px;
+    }
+
+    #secondWrap .text .s {
+        margin-right: 0;
+    }
+}
+
 /*Configuracion del pie de página*/
 footer {
     /*Eliminamos el margen inferior y anclamos al fondo*/
