@@ -203,12 +203,12 @@ a {
 
 @media (max-width: 768px) {
     #firstWrap {
-        padding: 75px;
+        padding: 75px; /*Separa el contenedor de la navbar*/
     }
 
-    #firstWrap div {
+    #firstWrap div { 
         height: auto;
-        width: auto;
+        width: auto; /*el ancho y el alto del div se modifican automaticamente con un minimo de 20 px dado por el padding*/
         padding: 20px;
     }
 
